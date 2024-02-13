@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvInput"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:textSize="48sp"
+        android:text=""
+        android:padding="6dp"
+        android:gravity="end|bottom"
+        android:background="#efefef"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@drawable/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="7"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="8"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="9"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="/"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/yellowcircle"
+            android:onClick="onOperator"/>
+
+<!--        <TextView-->
+<!--            android:id="@+id/btn_seven"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/circle"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:backgroundTint="@color/grey"-->
+<!--            android:text="7"-->
+<!--            android:onClick="onDigit"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_eight"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/circle"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:text="8"-->
+<!--            android:onClick="onDigit"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_nine"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/circle"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:text="9"-->
+<!--            android:onClick="onDigit"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_div"-->
+<!--            android:layout_width="80dp"-->
+<!--            android:layout_height="80dp"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/circle"-->
+<!--            android:text="/"-->
+<!--            android:onClick="onOperator"/>-->
+
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_weight="1"-->
+<!--        android:padding="8dp"-->
+<!--        android:orientation="horizontal">-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_seven"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/circle"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="7"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_eight"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="8"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_nine"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="9"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_div"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:onClick="onOperator"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="/"/>-->
+
+
+
+<!--    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_four"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="4"/>-->
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="4"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="5"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="6"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="*"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/yellowcircle"
+            android:onClick="onOperator"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_five"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="5"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_six"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="6"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_mul"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:onClick="onOperator"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="*"/>-->
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_one"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="1"/>-->
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="1"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="2"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_two"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="2"/>-->
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_three"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:onClick="onDigit"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:backgroundTint="@color/grey"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:text="3"/>-->
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="3"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="-"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/yellowcircle"
+            android:onClick="onOperator"/>
+
+
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_minus"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:onClick="onOperator"-->
+<!--            android:background="@drawable/rect"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:text="-"/>-->
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+
+
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="."
+            android:gravity="center"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:background="@drawable/circle"
+            android:onClick="onDecimal"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="0"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle"
+            android:onClick="onDigit"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="CLR"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/circle"
+            android:onClick="onClear"/>
+
+        <TextView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:text="+"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/yellowcircle"
+            android:onClick="onOperator"/>
+
+
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_plus"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_margin="2dp"-->
+<!--            android:onClick="onOperator"-->
+<!--            android:text="+"-->
+<!--            android:background="@drawable/rect"-->
+<!--            tools:ignore="NestedWeights" />-->
+
+
+
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btn_equal"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:onClick="onEqual"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:layout_marginStart="305dp"
+            android:background="@drawable/yellowcircle"
+            android:text="="
+            android:textColor="@color/white"
+            tools:ignore="NestedWeights" />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
